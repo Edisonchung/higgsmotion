@@ -12,7 +12,7 @@ export default function Products() {
     <section id="products" className="bg-[#FAF8F5] py-28 px-8 lg:px-16" ref={ref as any}>
       <h2 className="font-serif text-[clamp(34px,4vw,54px)] font-light text-ink mb-20 reveal">Three resolutions. One transparent vision.</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5">
-        {PRODUCTSa{p => (
+        {PRODUCTS.map(p => (
           <div key={p.slug} className={`bg-white p-12 reveal hover:-translate-y-1 transition-transform border-t-[3px] ${p.featured?'border-brand':'border-transparent hover:border-accent'}`}>
             {p.featured && <span className="text-[9px] text-white bg-brand px-2.5 py-1">Recommended</span>}
             <span className="text-[11px] uppercase text-accent block mb-4 mt-4">{p.name}</span>
