@@ -1,0 +1,13 @@
+import type { Metadata } from 'next'
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
+import './globals.css'
+const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300','400','600'], style: ['normal','italic'], variable: '--font-cormorant', display: 'swap' })
+const dmSans = DM_Sans({ subsets: ['latin'], weight: ['300','400','500'], variable: '--font-dm-sans', display: 'swap' })
+export const metadata: Metadata = {
+  title: 'HiggsMotion Transparent LED Film Display',
+  description: 'HiggsMotion Crystal LED Film transforms any glass surface into a vivid high-impact digital display. Retail digital signage Malaysia.',
+  openGraph: { title: 'HiggsMotion', description: 'Invisible by day. Brilliant by night.', url: 'https://higgsmotion.com' }
+}
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}><body>{children}</body></html>
+}

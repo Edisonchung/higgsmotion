@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --font-cormorant: 'Cormorant Garamond',Georgia,serif; --font-dm-sans: 'DM Sans',system-ui,sans-serif; }
+body { background-color: #F7F4EF; color: #0E0E0E; font-family: var(--font-dm-sans); overflow-x: hidden; }
+html { scroll-behavior: smooth; }
+.screen-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(201,169,110,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,110,.06) 1px,transparent 1px); background-size: 40px 40px; animation: gridPulse 4s ease-in-out infinite; }
+@keyframes gridPulse { 0%,100% { opacity:.5 } 50% { opacity:1 } }
+@keyframes glowPulse { 0%,100% { text-shadow:0 0 40px rgba(201,169,110,.2) } 50% { text-shadow:0 0 80px rgba(201,169,110,.5) } }
+@keyframes ledBlink { 0%,100% { opacity:.1;transform:scale(1) } 50% { opacity:1;transform:scale(1.5) } }
+.glow-text { animation: glowPulse 3s ease-in-out infinite; }
+.reveal { opacity:0; transform:translateY(30px); transition:opacity .7s ease,transform .7s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.led-dot { position:absolute; width:3px; height:3px; border-radius:50%; }
