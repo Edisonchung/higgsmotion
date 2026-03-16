@@ -1,0 +1,36 @@
+# HiggsMotion — higgsmotion.com
+HiggsMotion is a Crystal LED Film Display System distributed in Malaysia by EMI Automation Sdn Bhd under the iNHAUS brand.
+
+## What it is
+Transparent LED film that adheres directly to existing glass surfaces — no frame, no structural changes required.
+Transforms any flat glass into a full-colour dynamic digital display while maintaining transparency when off.
+
+## Products
+Three pixel pitch options for the SF series:
+- P4: 62,500 dot/m², transparency >82%, brightness 1,500 cd/m², optimal viewing ≥4m
+- P6: 27,778 dot/m², transparency >85%, brightness 3,000 cd/m², optimal viewing ≥6m (recommended)
+- P10: 10,000 dot/m², transparency >90%, brightness 2,000 cd/m², optimal viewing ≥10m
+
+Common specs: LED lifespan ≥100,000hrs, refresh rate ≥3,840Hz, module size 240×1065mm, Novastar control system
+
+## Applications
+Commercial storefronts, shopping mall atria, glass curtain walls, interior partitions, hotel lobbies, exhibition displays, escalator glass panels, ceiling hanging installations
+
+## Pricing (Malaysia, standard 3,600×2,130mm installation)
+- P10 turnkey: RM 76,057 (supply + delivery + installation)
+- P6 turnkey: RM 100,757
+- P4 turnkey: RM 182,557
+Custom sizes available on request.
+
+## Who to contact
+EMI Automation Sdn Bhd (authorised distributor for Malaysia)
+Email: info@emiautomation.com
+Phone: +601 7807 0817
+Website: emiautomation.com
+
+## Brand
+HiggsMotion™ is a product brand of INHAUS Sdn Bhd, Kuala Lumpur, Malaysia.
+
+## Enquiry
+Request a proposal at higgsmotion.com/#contact
+

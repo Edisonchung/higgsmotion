@@ -11,6 +11,7 @@ export default function Nav() {
       <ul className="hidden md:flex items-center gap-10 list-none">
         <li><Link href="#products" className="text-xs uppercase text-ink opacity-70 hover:opacity-100 no-underline">Products</Link></li>
         <li><Link href="#pricing" className="text-xs uppercase text-ink opacity-70 hover:opacity-100 no-underline">Pricing</Link></li>
+        <li><Link href="#applications" className="text-xs uppercase text-ink opacity-70 hover:opacity-100 no-underline">Applications</Link></li>
         <li><Link href="#why" className="text-xs uppercase text-ink opacity-70 hover:opacity-100 no-underline">Why HiggsMotion</Link></li>
         <li><Link href="#contact" className="text-xs uppercase text-off-white bg-ink px-6 py-2.5 hover:bw-brand transition-colors no-underline">Request Proposal</Link></li>
       </ul>
