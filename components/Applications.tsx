@@ -53,48 +53,12 @@ const APPLICATIONS = [
 ]
 
 const CASES = [
-  {
-    venue: 'Jinan Beauty Salon',
-    country: 'Shandong, China',
-    date: 'May 2024',
-    spec: 'P8 · 240×960mm · 11.52 sqm',
-    type: 'Commercial Window',
-  },
-  {
-    venue: 'Beijing Motor Show',
-    country: 'Beijing, China',
-    date: 'May 2024',
-    spec: 'P10 · 240×1000mm · 12 sqm',
-    type: 'Exhibition Display',
-  },
-  {
-    venue: 'Huaqiang North Metro',
-    country: 'Shenzhen, China',
-    date: 'Jun 2024',
-    spec: 'P8 · 240×1400mm · 26.88 sqm',
-    type: 'Glass Curtain Wall',
-  },
-  {
-    venue: 'Science Innovation Centre',
-    country: 'Changchun, China',
-    date: 'Aug 2024',
-    spec: 'P6 · 240×1200mm · 200 sqm',
-    type: 'Interior Partition',
-  },
-  {
-    venue: 'Tourism Innovation Centre',
-    country: 'Hunan, China',
-    date: 'Oct 2024',
-    spec: 'P8 · 240×1200mm · 28 sqm',
-    type: 'Exhibition Display',
-  },
-  {
-    venue: 'Technology Group Showroom',
-    country: 'Beijing, China',
-    date: 'Dec 2024',
-    spec: 'P6 · 240×1500mm · 60 sqm',
-    type: 'Glass Curtain Wall',
-  },
+  { venue: 'Beauty & Wellness Centre',        country: 'Shandong, China',   date: 'May 2024',  spec: 'P8 · 240×960mm · 11.52 sqm',  type: 'Commercial Window'  },
+  { venue: 'International Automotive Expo',   country: 'Beijing, China',    date: 'May 2024',  spec: 'P10 · 240×1000mm · 12 sqm',   type: 'Exhibition Display' },
+  { venue: 'Urban Metro Station Entrance',    country: 'Shenzhen, China',   date: 'Jun 2024',  spec: 'P8 · 240×1400mm · 26.88 sqm', type: 'Glass Curtain Wall' },
+  { venue: 'Science Innovation Centre',       country: 'Changchun, China',  date: 'Aug 2024',  spec: 'P6 · 240×1200mm · 200 sqm',   type: 'Interior Partition' },
+  { venue: 'Tourism & Cultural Centre',       country: 'Hunan, China',      date: 'Oct 2024',  spec: 'P8 · 240×1200mm · 28 sqm',    type: 'Exhibition Display' },
+  { venue: 'Corporate Technology Showroom',   country: 'Beijing, China',    date: 'Dec 2024',  spec: 'P6 · 240×1500mm · 60 sqm',    type: 'Glass Curtain Wall' },
 ]
 
 export default function Applications() {
@@ -110,7 +74,6 @@ export default function Applications() {
 
   return (
     <section id="applications" className="py-28 px-8 lg:px-16 bg-[#FAF8F5]" ref={ref as any}>
-      {/* Header */}
       <p className="text-[11px] tracking-[0.18em] uppercase text-accent mb-4 reveal">Applications</p>
       <h2 className="font-serif text-[clamp(34px,4vw,54px)] font-light text-ink mb-4 reveal">
         Every glass surface is a canvas.
@@ -120,7 +83,6 @@ export default function Applications() {
         From single shopfront windows to large-scale architectural façades.
       </p>
 
-      {/* Application Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/8 mb-24 reveal">
         {APPLICATIONS.map((a) => (
           <div key={a.id} className="bg-white p-8 hover:bg-[#FAF8F5] transition-colors">
@@ -134,7 +96,6 @@ export default function Applications() {
         ))}
       </div>
 
-      {/* Case Studies */}
       <p className="text-[11px] tracking-[0.18em] uppercase text-accent mb-6 reveal">
         Reference Installations
       </p>
@@ -170,9 +131,9 @@ export default function Applications() {
         </table>
       </div>
       <p className="mt-4 text-xs text-muted italic reveal">
-        Reference cases supplied by Chestnuter Technology Co., Ltd. Custom sizes available for all applications.
+        Reference installations are indicative of product capabilities across similar applications.
+        Custom sizes available for all scenarios — contact us for a site-specific proposal.
       </p>
     </section>
   )
 }
-

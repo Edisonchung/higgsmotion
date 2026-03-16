@@ -6,21 +6,20 @@ Transparent LED film that adheres directly to existing glass surfaces — no fra
 Transforms any flat glass into a full-colour dynamic digital display while maintaining transparency when off.
 
 ## Products
-Three pixel pitch options for the SF series:
+Three pixel pitch options:
 - P4: 62,500 dot/m², transparency >82%, brightness 1,500 cd/m², optimal viewing ≥4m
-- P6: 27,778 dot/m², transparency >85%, brightness 3,000 cd/m², optimal viewing ≥6m (recommended)
+- P6: 27,778 dot/m², transparency >85%, brightness 3,000 cd/m², optimal viewing ≥6m (most popular)
 - P10: 10,000 dot/m², transparency >90%, brightness 2,000 cd/m², optimal viewing ≥10m
 
 Common specs: LED lifespan ≥100,000hrs, refresh rate ≥3,840Hz, module size 240×1065mm, Novastar control system
 
 ## Applications
-Commercial storefronts, shopping mall atria, glass curtain walls, interior partitions, hotel lobbies, exhibition displays, escalator glass panels, ceiling hanging installations
+Commercial storefronts, shopping mall atria, glass curtain walls, interior partitions, hotel lobbies,
+exhibition displays, escalator glass panels, ceiling hanging installations
 
-## Pricing (Malaysia, standard 3,600×2,130mm installation)
-- P10 turnkey: RM 76,057 (supply + delivery + installation)
-- P6 turnkey: RM 100,757
-- P4 turnkey: RM 182,557
-Custom sizes available on request.
+## Pricing
+Price on request. Custom quotation provided within 24 hours based on screen size, pixel pitch, and site requirements.
+Contact EMI Automation Sdn Bhd for a tailored proposal.
 
 ## Who to contact
 EMI Automation Sdn Bhd (authorised distributor for Malaysia)
