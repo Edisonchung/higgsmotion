@@ -14,8 +14,8 @@ export default function WhySection() {
               Clarity at any distance
             </h3>
             <p className="text-white/80">
-              Three calibrated pixel pitches tuned for storefronts, atriums, and large-format façades, so
-              your content reads cleanly from 3 meters or 30.
+              Three calibrated pixel pitches tuned for storefronts, atriums, and large-format façades.
+              P4 reads cleanly from 4 metres; P10 commands attention across 10 metres or more.
             </p>
           </div>
           <div>
@@ -23,8 +23,8 @@ export default function WhySection() {
               Architecture-first engineering
             </h3>
             <p className="text-white/80">
-              Slimline framing, high transparency, and neutral off-state glass keep your façade honest to the
-              original design language—even when the display is dark.
+              Slimline framing, high transparency, and neutral off-state glass keep your façade honest
+              to the original design language—even when the display is dark.
             </p>
           </div>
           <div>
@@ -32,8 +32,8 @@ export default function WhySection() {
               Operationally simple
             </h3>
             <p className="text-white/80">
-              Solid-state electronics, remote health monitoring, and replaceable modules mean your operations
-              team treats the wall like infrastructure, not an experiment.
+              Solid-state electronics, remote health monitoring, and replaceable modules mean your
+              operations team treats the wall like infrastructure, not an experiment.
             </p>
           </div>
         </div>
@@ -41,4 +41,3 @@ export default function WhySection() {
     </section>
   )
 }
-

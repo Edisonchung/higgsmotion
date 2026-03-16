@@ -1,7 +1,14 @@
 'use client'
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
-const STATS = [{ num: '>=95%', label: 'Transparency' },{ num: '2.5mm', label: 'Film Thickness' },{ num: '4,000', label: 'cd/m2 Brightness' },{ num: '50K hrs', label: 'Service Life' }]
+
+const STATS = [
+  { num: 'up to 90%', label: 'Transparency' },
+  { num: '2.5mm',     label: 'Film Thickness' },
+  { num: '3,000',     label: 'cd/m² Brightness' },
+  { num: '≥100K hrs', label: 'Service Life' },
+]
+
 export default function Hero() {
   const dotsRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
@@ -14,13 +21,16 @@ export default function Hero() {
     }
     return () => { c.innerHTML='' }
   }, [])
+
   return (
     <section className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
       <div className="flex flex-col justify-end px-8 lg:px-16 pt-36 pb-20">
         <h1 className="font-serif text-[clamp(48px,6vw,100px)] font-light leading-[1.05] text-ink mb-8">
           Invisible by day.<br /><em className="italic text-brand">Brilliant</em> by night.
         </h1>
-        <p className="text-base font-light leading-[1.75] text-muted max-w-md mb-12">HiggsMotion Crystal LED Film transforms any glass surface into a vivid high-impact digital display.</p>
+        <p className="text-base font-light leading-[1.75] text-muted max-w-md mb-12">
+          HiggsMotion Crystal LED Film transforms any glass surface into a vivid high-impact digital display.
+        </p>
         <div className="flex items-center gap-8">
           <Link href="#products" className="bg-ink text-off-white text-xs uppercase px-10 py-4 hover:bw-brand transition-colors no-underline">Explore Products</Link>
           <Link href="#contact" className="text-xs uppercase text-ink border-b border-ink pb-0.5 hover:text-brand hover:border-brand transition-colors no-underline">Request Proposal</Link>

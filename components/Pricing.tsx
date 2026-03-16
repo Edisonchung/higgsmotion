@@ -1,33 +1,116 @@
 'use client'
 import { useEffect, useRef } from 'react'
-const ROWS = [{ pitch:'P4',size:'1.5m x 1.4m',sqm:3.6,unit:2550,total:10220,myr:'~RM 48,000',note:'High resolution'},{pitch:'P6',size:'1.5m x 1.4m',sqm:3.6,unit:1195,total:4857,myr:'~RM 22,000',note:'rec'},{pitch:'P10',size:'1.5m x 1.4m',sqm:3.6,unit:865,total:3559,myr:'~RM 16,000',note:'Budget'},{pitch:'P4',size:'3.0m x 2.9m',sqm:8.64,unit:2550,total:23137,myr:'~RM 108,000',note:'High resolution'},{pitch:'P6',size:'3.0m x 1.9m',sqm:8.64,unit:1195,total:10945,myr:'~RM 51,000',note:'rec'},{pitch:'P10',size:'3.0m x 2.9m',sqm:8.64,unit:865,total:7984,myr:'~RM 37,000',note:'Budget'},{pitch:'P4',size:'6.0m x 3.0m',sqm:18,unit:2550,total:47185,myr:'~RM 221,000',note:'High resolution'},{pitch:'P6',size:'6.0m x 3.0m',sqm:18,unit:1195,total:22220,myr:'~RM 104,000',note:'rec'},{pitch:'P10',size:'6.0m x 3.0m',sqm:18,unit:865,total:16170,myr:'~RM 75,000',note:'Budget'}]
+import Link from 'next/link'
+
+const OPTIONS = [
+  {
+    pitch: 'P10',
+    label: 'Value',
+    transparency: '> 90%',
+    brightness: '2,000 cd/m²',
+    viewing: '≥ 10m',
+    myr: 'RM 76,057',
+    featured: false,
+    desc: 'Best for large open retail spaces with wide viewing angles.',
+  },
+  {
+    pitch: 'P6',
+    label: 'Recommended',
+    transparency: '> 85%',
+    brightness: '3,000 cd/m²',
+    viewing: '≥ 6m',
+    myr: 'RM 100,757',
+    featured: true,
+    desc: 'Highest brightness in the range. Ideal for retail showcase and promotional display.',
+  },
+  {
+    pitch: 'P4',
+    label: 'Premium',
+    transparency: '> 82%',
+    brightness: '1,500 cd/m²',
+    viewing: '≥ 4m',
+    myr: 'RM 182,557',
+    featured: false,
+    desc: 'Highest pixel density for entrance displays and close-up viewing.',
+  },
+]
+
 export default function Pricing() {
   const ref = useRef<HTMLElement>(null)
   useEffect(() => {
-    const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')),{ threshold: 0.1 })
+    const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.1 })
     ref.current?.querySelectorAll('.reveal').forEach(el => obs.observe(el))
     return () => obs.disconnect()
   }, [])
+
   return (
     <section id="pricing" className="py-28 px-8 lg:px-16 bg-off-white" ref={ref as any}>
-      <h2 className="font-serif text-[clamp(34px,4vw,54px)] font-light text-ink mb-16 reveal">Standard sizes. Custom installations welcome.</h2>
-      <div className="overflow-x-auto reveal">
-        <table className="w-full text-sm border-collapse">
-          <thead><tr className="bg-ink text-white">{['Pixel Pitch','Size','Area (sqm)','USD/m2','Total USD','Est. MYR','Notes'].map(h => <th key={h} className="px-5 py-4 text-left text-xs uppercase whitespace-nowrap">{h}</th>)}</tr></thead>
-          <tbody>{ROWS.map((r,i) => (
-            <tr key={i} className={i % 2 === 1 ? 'bg-warm-white' : 'bg-white'}>
-              <td className="px-5 py-4 font-medium">{r.pitch}</td>
-              <td className="px-5 py-4">{r.size}</td>
-              <td className="px-5 py-4">{r.sqm}</td>
-              <td className="px-5 py-4">USD {r.unit.toLocaleString()}</td>
-              <td className="px-5 py-4 font-serif">USD {r.total.toLocaleString()}</td>
-              <td className="px-5 py-4 text-muted">{r.myr}</td>
-              <td className="px-5 py-4">{r.note==='rec'?<span className="text-[9px] text-white bg-accent px-2 py-1">Recommended</span>:<span className="text-xs text-muted">{r.note}</span>}</td>
-            </tr>
-          ))}</tbody>
-        </table>
+      <p className="text-[11px] tracking-[0.18em] uppercase text-accent mb-4 reveal">Pricing</p>
+      <h2 className="font-serif text-[clamp(34px,4vw,54px)] font-light text-ink mb-4 reveal">
+        Standard installation. Turnkey price.
+      </h2>
+      <p className="text-sm text-muted mb-16 max-w-xl reveal">
+        The following prices are for our standard 3,600 × 2,130mm installation (7.668 sqm · 30 modules).
+        All prices are in Malaysian Ringgit and include supply, delivery, installation, testing, and commissioning.
+        Custom sizes available — contact us for a site-specific quotation.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+        {OPTIONS.map(o => (
+          <div
+            key={o.pitch}
+            className={`relative p-10 border ${o.featured ? 'bg-ink text-white border-ink' : 'bg-white border-black/10'}`}
+          >
+            {o.featured && (
+              <span className="absolute top-4 right-4 text-[9px] uppercase text-white bg-brand px-2.5 py-1">
+                {o.label}
+              </span>
+            )}
+            {!o.featured && (
+              <span className="text-[10px] uppercase text-accent block mb-2">{o.label}</span>
+            )}
+            <div className={`font-serif text-5xl font-light mb-1 ${o.featured ? 'text-accent' : 'text-ink'}`}>
+              {o.pitch}
+            </div>
+            <p className={`text-xs mb-8 ${o.featured ? 'text-white/60' : 'text-muted'}`}>{o.desc}</p>
+
+            <ul className="space-y-3 mb-10 text-sm">
+              {[
+                ['Transparency', o.transparency],
+                ['Brightness', o.brightness],
+                ['Optimal Viewing', o.viewing],
+                ['Screen Size', '3,600 × 2,130mm'],
+                ['Area', '7.668 sqm'],
+                ['Modules', '30 pcs (240×1065mm)'],
+              ].map(([k,v]) => (
+                <li key={k} className={`flex justify-between border-b pb-2 ${o.featured ? 'border-white/10 text-white/80' : 'border-black/8 text-muted'}`}>
+                  <span className={o.featured ? 'text-white/50' : 'text-muted'}>{k}</span>
+                  <span className="font-medium">{v}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className={`font-serif text-3xl mb-1 ${o.featured ? 'text-white' : 'text-ink'}`}>
+              {o.myr}
+            </div>
+            <p className={`text-xs mb-8 ${o.featured ? 'text-white/50' : 'text-muted'}`}>
+              Turnkey — supply · delivery · installation
+            </p>
+
+            <Link
+              href="#contact"
+              className={`inline-block text-xs uppercase pb-0.5 border-b transition-colors no-underline ${o.featured ? 'text-accent border-accent hover:text-white hover:border-white' : 'text-ink border-ink hover:text-brand hover:border-brand'}`}
+            >
+              Request Proposal →
+            </Link>
+          </div>
+        ))}
       </div>
-      <p className="mt-5 text-xs text-muted italic reveal">* MYR figures indicative at USD/MYR ~4.70. Spare parts: P4 USD 875/pc, P6 USD 390/pc, P10 USD 280/pc.</p>
+
+      <p className="mt-8 text-xs text-muted italic reveal">
+        * Prices valid for 2 weeks from date of quotation. Lead time: 20–25 working days after P.O. and 50% deposit.
+        1-year local warranty included. Contact EMI Automation for custom sizes and multi-site projects.
+      </p>
     </section>
   )
 }
