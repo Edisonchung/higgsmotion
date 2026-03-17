@@ -2,12 +2,11 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
-// 6 product photos in public/images/
+// 5 product photos in public/images/
 const PHOTOS = [
   { src: '/images/product-1.jpg', caption: 'LED film on glass — off state' },
   { src: '/images/product-2.jpg', caption: 'Crystal LED modules close-up' },
   { src: '/images/product-3.jpg', caption: 'Film flexibility and curvature' },
-  { src: '/images/product-4.jpg', caption: 'Active display on glass surface' },
   { src: '/images/product-5.jpg', caption: 'Module structure detail' },
   { src: '/images/product-6.jpg', caption: 'Transparency — see-through quality' },
 ]
