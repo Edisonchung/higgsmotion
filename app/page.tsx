@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import IntroStrip from '@/components/IntroStrip'
+import PhotoGallery from '@/components/PhotoGallery'
 import Products from '@/components/Products'
 import Pricing from '@/components/Pricing'
 import WhySection from '@/components/WhySection'
@@ -14,6 +15,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <IntroStrip />
+      <PhotoGallery />
       <Products />
       <Pricing />
       <WhySection />
